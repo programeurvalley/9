@@ -1,0 +1,236 @@
+
+    /* footer */
+    footer {
+        min-height: 100vh;
+        margin: 0;
+        background-color: rgb(235, 233, 233);
+        padding: 6rem 10rem;
+    }
+    
+    footer .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem 1rem;
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+    footer .icon-icon {
+        color: #359756;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 8px 0;
+    }
+    
+    .contact-info .info {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        width: 300px;
+    }
+    .contact-info .info .icon-icon {
+        margin-right: 8px;
+        align-self: flex-start;
+    }
+    
+    .form {
+        width: 600px;
+        padding: 8px 3rem;
+        margin-left: 0 2rem;
+    }
+    
+    .form .field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(235, 233, 233);
+        outline: none;
+        border: none;
+    }
+    
+    input[type="submit"].field {
+        border: 2px solid #359756;
+        color: #359756;
+        background: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input[type="submit"].field:hover {
+        border: 2px solid #359756;
+        background: #359756;
+        color: white;
+    }
+    /* Media queries */
+    @media screen and (max-width: 900px) {
+        :root {
+        font-size: 10px;
+        }
+    
+        body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        }
+    
+        .heroSection,
+        .section,
+        .services {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        }
+        aside {
+        width: 80%;
+        height: auto;
+        text-align: center;
+        }
+        aside img {
+        width: 90%;
+        }
+        .section-content {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+        h1,
+        p {
+        margin: auto;
+        text-align: center;
+        }
+        .btns {
+        flex-direction: column;
+        align-items: center;
+        }
+    
+        .services h1,
+        .services p {
+        text-align: start;
+        margin: 0;
+        }
+        .services button {
+        display: block;
+        margin: 0;
+        }
+    
+        .services .offers,
+        section .users {
+        width: 100%;
+        grid-template-columns: 70%;
+        }
+        .offers h1,
+        .offers p {
+        text-align: center;
+        }
+        .feedback h2 {
+        max-width: 40ch;
+        }
+        .feedback h1 {
+        font-size: 30px;
+        }
+        footer,
+        footer .container {
+        width: 100%;
+        padding: 5rem;
+        }
+        footer .container {
+        flex-direction: column;
+        align-items: center;
+        }
+    
+        .contact-info {
+        width: 100%;
+        padding: 10px 10px;
+        }
+        .contact-info .info {
+        width: 100%;
+        }
+        .info p {
+        margin: 0;
+        text-align: start;
+        }
+        .form {
+        width: 100%;
+        padding: 8px 0;
+        margin: 0;
+        }
+    
+        .btn-container {
+        margin-bottom: 10px;
+        }
+    }
+    
+    /* animation for the form  */
+    .form .field {
+        margin-bottom: 1em;
+        transition: all 0.3s;
+    }
+    
+    label {
+        font-size: 1em;
+        color: #aaa;
+        display: block;
+        transform: translateY(-40px);
+        transform-origin: 0 0;
+        transition: all 0.3s;
+        padding-left: 10px;
+    }
+    
+    .msg-label {
+        transform: translateY(-160px);
+        transform-origin: 0 0;
+    }
+    
+    .field::placeholder {
+        color: transparent;
+    }
+    
+    .field:focus + label,
+    .field:not(:placeholder-shown) + label {
+        transform: translateY(-70.4px) scale(0.8);
+    }
+    
+    .field:focus + .msg-label,
+    .field:not(:placeholder-shown) + .msg-label {
+        transform: translateY(-190px) scale(0.8);
+    }
+    
+    .field:focus {
+        border: 1px solid #359756;
+    }
+    .input-container:focus-within {
+        transform: scale(1.01, 1.01);
+    }
+    
+    /* floating animation after submiting */
+    .floating {
+        transform: translateY(0);
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-7px);
+        }
+        100% {
+        transform: translateY(0);
+        }
+    }
+    /* error indication  */
+    .form .field.error {
+        border: 1px red solid;
+    }
+    
